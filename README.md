@@ -1,87 +1,43 @@
-# Welcome to React Router!
+# 🚀 Project Title
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A [React Router v7 framework + TypeScript] web application built for dynamic filtering. This project follows modern frontend development standards, including strict code formatting, linting, and Git pre-commit checks for consistent collaboration and high-quality code.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 📁 Tech Stack
 
-## Features
+- **React Router v7**
+- **TypeScript / JavaScript**
+- **Tailwind CSS** (or styled-components, etc.)
+- **Prettier** – Code formatter
+- **ESLint** – Linter for code quality
+- **Husky** + **lint-staged** – Git hook for pre-commit checks
+- **Vite** / **CRA** – Dev server & bundler
+- **Zod / React Hook Form** -Form management
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## 🧱 Project Structure
 
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
+project/
+├── app/
+│ ├── routes/
+│ │ ├── home.tsx
+│ │ ├── dashborad.tsx
+│ ├── components/
+│ ├── welcome/
+│ │ └── Welcome.tsx
+│ └── root.tsx
+├── public/
 ├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 
-## Styling
+## Project summary
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+### 🧭 Routing Strategy: React Router v7 (Framework Mode)
 
----
+This project uses **React Router v7+ in Framework Mode**, which supports:
 
-Built with ❤️ using React Router.
+- **File-based routing** from the `app/routes` directory.
+- **Loader and Action functions** for data fetching and mutations.
+- **Nested layouts and outlet composition** via `root.tsx` and `Outlet`.
+- **Built-in form submission and validation** with `<Form>` components.
+- SSR and full-stack capability if extended with a backend (e.g., Express, Cloudflare Workers, or Remix-style deployment).
