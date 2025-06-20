@@ -2,7 +2,6 @@ import {
   isRouteErrorResponse,
   Links,
   Meta,
-  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
@@ -44,23 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-    <div>
-      <NavLink
-        to="/bemdev/about"
-        style={({ isActive }) => ({
-          color: isActive ? 'red' : 'blue',
-        })}
-      >
-        About
-      </NavLink>
-      <NavLink
-        to="finances"
-        style={({ isActive }) => ({
-          color: isActive ? 'red' : 'blue',
-        })}
-      >
-        Finances
-      </NavLink>
+    <div className="bg-blue-500">
       <Outlet />
     </div>
   );
