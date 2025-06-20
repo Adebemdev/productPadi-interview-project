@@ -3,7 +3,7 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import pluginReact from 'eslint-plugin-react';
 import pluginPrettier from 'eslint-plugin-prettier';
-import prettierConfig from 'eslint-config-prettier';
+// import prettierConfig from 'eslint-config-prettier';
 import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
@@ -15,6 +15,7 @@ export default defineConfig([
     plugins: {
       js,
       prettier: pluginPrettier,
+      react: pluginReact,
     },
     rules: {
       ...pluginPrettier.configs.recommended.rules,
@@ -26,7 +27,8 @@ export default defineConfig([
   // Make sure Prettier disables conflicting ESLint rules
   {
     rules: {
-      ...prettierConfig.rules,
+      // ...prettierConfig.rules,
+      'react/react-in-jsx-scope': 'off',
     },
   },
 ]);
